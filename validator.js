@@ -32,6 +32,7 @@ $("input").focus(() => {
     for (let item of erroemessages) {
         item.remove();
     }
+    $('input[type=submit]').removeAttr("disabled");
 })
 //
 function checkRegExpres(ID, regularEx, message) {
