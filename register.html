@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/registerStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  </head>
+  <body>
+    <div class="signup-form">
+      <form class="" action="login.html" method="">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Full Name" class="txtb" id="txtUser">
+        <input type="email" placeholder="Email" class="txtb" id="txtEmail">
+        <input type="text" placeholder="Password" class="txtb" id="txtPassword">
+       
+        <input type="submit" value="Create Account" class="signup-btn">
+        <a href="login.html">Already Have one ?</a>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="validator.js"></script>
+    <script >
+    $(".signup-btn").click((e) => {
+    if (!(checkInputEmpty()&&checkRegExpres("txtUser", "[a-zA-Z]+", "Ad yanlisdir") &&
+        checkRegExpres("txtEmail", "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", "Error") &&
+        passwordCheck("txtPassword"))) {
+            e.preventDefault();
+    }
+
+})
+    </script>
+  </body>
+</html>
