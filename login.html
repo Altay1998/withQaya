@@ -20,16 +20,6 @@
 
   <input type="button" class="btn" value="Sign in" >
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="validator.js"></script>
-<script >
-   $(".btn").click((e) => {
- if (!(checkInputEmpty()&&checkRegExpres("txtUser", "[a-zA-Z]+", "Ad yanlisdir") &&
-        passwordCheck("txtPassword"))) {
-            e.preventDefault();
-    }
 
-})
-</script>
   </body>
 </html>

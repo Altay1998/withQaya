@@ -15,8 +15,13 @@
         <input type="email" placeholder="Email" class="txtb" id="txtEmail">
         <input type="text" placeholder="Password" class="txtb" id="txtPassword">
        
+<<<<<<< HEAD
         <input type="submit" value="Create Account" class="signup-btn">
         <a href="index.html">Already Have one ?</a>
+=======
+        <input type="submit" value="Create Account" class="signup-btn" >
+        <a href="login.html">Already Have one ?</a>
+>>>>>>> 5c066ede3f69f6570095c2ea5ae701c666bf3e55
       </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -27,6 +32,7 @@
         checkRegExpres("txtEmail", "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$", "Error") &&
         passwordCheck("txtPassword"))) {
             e.preventDefault();
+            $('input[type=submit]').attr("disabled","true");
     }
 
 })
